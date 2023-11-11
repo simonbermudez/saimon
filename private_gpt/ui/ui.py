@@ -306,6 +306,7 @@ class PrivateGptUi:
             "#component-0, #component-3, #component-10, #component-8  { height: 100% !important; }"
             "#chatbot { flex-grow: 1 !important; overflow: auto !important;}"
             "#col { height: calc(100vh - 112px - 16px) !important; }",
+            title="Saimon"
         ) as blocks:
             with gr.Row():
                 gr.HTML(f"<div class='logo'/><h1>Saimon</h1></div")
