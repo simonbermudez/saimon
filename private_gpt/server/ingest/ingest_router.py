@@ -58,3 +58,4 @@ def delete_ingested(doc_id: str) -> None:
     """
     service = root_injector.get(IngestService)
     service.delete(doc_id)
+``
