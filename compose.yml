@@ -2,10 +2,18 @@ version: '3'
 
 services:
   saimon:
-    build: .
+    build:
+      dockerfile: Dockerfile.local
     restart: always
+    volumes:
+      - ./local_data/:/home/worker/app/local_data
+      - ./models/:/home/worker/app/models
     ports:
       - 8001:8080
+    environment:
+      PORT: 8080
+      PGPT_PROFILES: docker
+      PGPT_MODE: local
     deploy:
       resources:
         reservations:
